@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Strength Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Password Strength Analyzer</h1>
+
+        <p class="description">
+            Check your password strength and get suggestions
+            for creating a stronger password.
+        </p>
+
+        <div class="password-box">
+
+            <label for="password">Enter Password</label>
+
+            <div class="input-area">
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    oninput="checkPassword()"
+                >
+
+                <button onclick="showPassword()" id="showButton">
+                    Show
+                </button>
+            </div>
+
+        </div>
+
+        <div class="strength-section">
+
+            <h2>Password Strength</h2>
+
+            <div class="strength-bar">
+                <div id="strengthBar"></div>
+            </div>
+
+            <h3 id="strengthText">Enter a password</h3>
+
+        </div>
+
+        <div class="checks">
+
+            <h2>Password Requirements</h2>
+
+            <p id="length">✗ At least 8 characters</p>
+
+            <p id="uppercase">✗ Contains uppercase letter</p>
+
+            <p id="lowercase">✗ Contains lowercase letter</p>
+
+            <p id="number">✗ Contains a number</p>
+
+            <p id="special">✗ Contains special character</p>
+
+        </div>
+
+        <div class="suggestion">
+
+            <h2>Suggestion</h2>
+
+            <p id="suggestionText">
+                Enter a password to get suggestions.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
